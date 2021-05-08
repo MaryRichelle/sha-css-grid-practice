@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    color: white;
+    font-size: 25px;
+}
+
+.one{
+    
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-rows:    repeat(3, 40px) ;
+    grid-template-areas:    "header header aside aside"
+                            "main article article article"
+                            "footer footer footer footer";
+        width: 40%;
+    margin:  auto;
+    gap: 10px;
+}
+header{
+    grid-area: header;
+    background-color: aqua;
+    border-radius: 5px;
+}
+aside{
+    grid-area: aside;
+    background-color: rgb(20, 218, 36);
+    border-radius: 5px;
+
+
+
+}
+main{
+    grid-area: main;
+    background-color: rgb(255, 238, 0);
+    border-radius: 5px;
+
+}
+article{
+    grid-area: article;
+    background-color: rgb(255, 94, 0);
+    border-radius: 5px;
+
+
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(255, 0, 157);
+    border-radius: 5px;
+
+
+}
+/* 2 */
+.two{
+    
+    display: grid;
+    grid-template-columns:  50% 25% 25%;
+    grid-template-rows:    repeat(3, 33.3%) ;
+    grid-template-areas:    " grid-item1 grid-item1 grid-item1"
+                            " grid-item2 grid-item3 grid-item3"
+                            " grid-item2 grid-item4 grid-item5" ;
+        width:   30%;
+        height: 400px;
+    margin:  auto;
+    gap: 10px;
+}
+.grid-item1{
+    grid-area : grid-item1;
+    background-color: burlywood;
+    border-radius: 10px;
+}
+.grid-item2{
+    grid-area : grid-item2;
+    background-color: rgb(219, 153, 66);
+    border-radius: 10px;
+}
+.grid-item3{
+    grid-area : grid-item3;
+    background-color: rgb(126, 74, 7);
+    border-radius: 10px;
+}
+.grid-item4{
+    grid-area : grid-item4;
+    background-color: rgb(228, 132, 7);
+    border-radius: 10px;
+}
+.grid-item5{
+    grid-area : grid-item5;
+    background-color: rgb(228, 132, 7);
+    border-radius: 10px;
+}
+/* 3 */
+
+#three{
+    
+    display: grid;
+    grid-template-columns:   20% 60% 20%;
+    grid-template-rows:    70px 200px 70px  ;
+    grid-template-areas:    " grid-item1 grid-item1 grid-item1"
+                            " grid-item2 grid-item3 grid-item4" 
+                            " grid-item5 grid-item5 grid-item5" ;
+        width:   50%;
+        margin: auto;
+    gap: 1.5rem;
+    font-weight: bold;
+    
+}
+#three .grid-item1{
+    grid-area : grid-item1;
+    background-color: rgb(158, 151, 141);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#three .grid-item2{
+    grid-area : grid-item2;
+    background-color: rgb(75, 73, 71);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#three .grid-item3{
+    grid-area : grid-item3;
+    background-color: rgb(75, 73, 71);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#three .grid-item4{
+    grid-area : grid-item4;
+    background-color: rgb(75, 73, 71);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+#three .grid-item5{
+    grid-area : grid-item5;
+    background-color: rgb(158, 151, 141);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+@media only screen and (max-width: 1200px){
+    #three{
+        /* width:   80%; */
+        grid-template-columns:   40% 60% ;
+        grid-template-rows:    70px 200px 70px 70px ;
+        grid-template-areas:    " grid-item1 grid-item1"
+                                " grid-item2 grid-item3" 
+                                "grid-item4 grid-item4"
+                                " grid-item5 grid-item5" ;
+        gap: 1rem;width:   600px;
+    }
+}
+@media only screen and (max-width: 800px){
+    #three{
+        grid-template-columns:    1fr;
+        grid-template-rows:    70px 70px 70px 70px 70px;
+        grid-template-areas:    " grid-item1 "
+                                " grid-item2 "
+                                "grid-item3" 
+                                "grid-item4 "
+                                " grid-item5" ;
+        gap: 1rem;
+        width:   90%;
+        font-size: 25px;
+    }
+    #three .grid-item3{
+        line-height: 0.6;
+
+    }
+}
+
